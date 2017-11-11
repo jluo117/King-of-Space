@@ -17,6 +17,7 @@
 		793916011FB766D80051098E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 793915FF1FB766D80051098E /* LaunchScreen.storyboard */; };
 		7939160C1FB766D80051098E /* King_of_SpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7939160B1FB766D80051098E /* King_of_SpaceTests.swift */; };
 		793916171FB766D80051098E /* King_of_SpaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793916161FB766D80051098E /* King_of_SpaceUITests.swift */; };
+		793916291FB777690051098E /* ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793916281FB777690051098E /* ship.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		793916121FB766D80051098E /* King of SpaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "King of SpaceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		793916161FB766D80051098E /* King_of_SpaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King_of_SpaceUITests.swift; sourceTree = "<group>"; };
 		793916181FB766D80051098E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		793916281FB777690051098E /* ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ship.swift; path = "King of Space/src/ship.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		793915E41FB766D70051098E = {
 			isa = PBXGroup;
 			children = (
+				793916281FB777690051098E /* ship.swift */,
 				793915EF1FB766D70051098E /* King of Space */,
 				7939160A1FB766D80051098E /* King of SpaceTests */,
 				793916151FB766D80051098E /* King of SpaceUITests */,
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				793915F71FB766D80051098E /* GameScene.swift in Sources */,
+				793916291FB777690051098E /* ship.swift in Sources */,
 				793915F91FB766D80051098E /* GameViewController.swift in Sources */,
 				793915F11FB766D80051098E /* AppDelegate.swift in Sources */,
 			);
