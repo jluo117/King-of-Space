@@ -31,8 +31,8 @@ class Ship{
             self.Shield = 1000
             self.MissleCount = 100
             self.EnergyCell = 1000
-            let multiMissle = Ability(dmg: 100)
-            let ultraMegaBeam = Ability(dmg: 500)
+            let multiMissle = Ability(dmg: 100, cost: 10, atkType: "missile")
+            let ultraMegaBeam = Ability(dmg: 500, cost:100, atkType: "laser")
             self.Abilities.append(multiMissle)
             self.Abilities.append(ultraMegaBeam)
         }
@@ -42,7 +42,7 @@ class Ship{
             self.Shield = 700
             self.MissleCount = 100
             self.EnergyCell = 0
-            let Missle = Ability(dmg: 50)
+            let Missle = Ability(dmg: 100, cost: 10, atkType: "missile")
             self.Abilities.append(Missle)
         }
         else if ShipClass == "Elite Fighters"{
@@ -51,8 +51,8 @@ class Ship{
             self.Shield = 400
             self.EnergyCell = 100
             self.MissleCount = 20
-            let blasters = Ability (dmg: 20)
-            let seekers = Ability (dmg: 50)
+            let blasters = Ability (dmg: 20, cost:15, atkType: "laser")
+            let seekers = Ability (dmg: 50, cost: 2, atkType: "missile")
             self.Abilities.append(blasters)
             self.Abilities.append(seekers)
         }
@@ -62,8 +62,8 @@ class Ship{
             self.Shield = 300
             self.EnergyCell = 50
             self.MissleCount = 10
-            let blasters = Ability(dmg:10)
-            let seekers = Ability(dmg: 30)
+            let blasters = Ability(dmg: 15, cost:10, atkType: "laser")
+            let seekers = Ability(dmg: 20, cost: 2, atkType: "missile")
             self.Abilities.append(blasters)
             self.Abilities.append(seekers)
         }
@@ -73,14 +73,37 @@ class Ship{
             self.Shield = 100
             self.EnergyCell = 10
             self.MissleCount = 5
-            let blasters = Ability(dmg:10)
-            let seekers = Ability(dmg: 15)
+            let blasters = Ability(dmg:10, cost:10, atkType: "laser")
+            let seekers = Ability(dmg: 15 ,cost: 2, atkType: "missile")
             self.Abilities.append(blasters)
             self.Abilities.append(seekers)
         }
+        let basic = Ability(dmg: 5, cost:0, atkType: "basic")
+        self.Abilities.append(basic)
         self.maxHp = self.Hp
         self.maxShield = self.Shield
         self.maxMissle = self.MissleCount
         self.maxEnergy = self.EnergyCell
+    }
+    func attack(aryNum: Int,target: Ship) {
+        if (self.Abilities[aryNum].atkType == "laser"){
+            if (self.Abilities[aryNum].cost > self.EnergyCell){
+                return
+            }
+            self.EnergyCell -= self.Abilities[aryNum].cost
+            self.Abilities[aryNum].attack(target: target)
+        }
+        else if (self.Abilities[aryNum].atkType == "missle"){
+            if (self.Abilities[aryNum].cost > self.MissleCount){
+                return
+            }
+            self.MissleCount -= self.Abilities[aryNum].cost
+            self.Abilities[aryNum].attack(target: target)
+        }
+    }
+    func recover(){
+        self.EnergyCell = self.maxEnergy
+        self.MissleCount = self.maxMissle
+        self.Hp = self.maxHp
     }
 }

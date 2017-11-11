@@ -7,30 +7,46 @@
 //
 
 import Foundation
-class Abilities{
-    var missileCount = 0
-    string type
-
-    func damageTaken(damage:Int, shieldMultiplier:Double, hpMultiplier:Double){
-        if (shield > 0){
-            target.shield -= (damage * shieldMultiplier)
-        }
-        else {
-            target.hp -= (damage * hpMultiplier)
-        }
+class Ability{
+    var dmg: Int
+    var cost : Int
+    var atkType : String
+    init(dmg: Int,cost: Int, atkType: String) {
+        self.dmg = dmg
+        self.cost = cost
+        self.atkType = atkType
     }
+    
     func attack(target:Ship) {
-        type = "regular"
-        target.damageTaken(1, 1, 1)
+        if self.atkType == "missile"{
+            fireMissile(target: target)
+        }
+        else if self.atkType == "laser"{
+            fireLaser(target: target)
+        }
+        else{
+            if (target.Shield > 0){
+                target.Shield -= (self.dmg)
+            }
+            else {
+                target.Hp -= (self.dmg)
+            }
+        }
     }
     func fireMissile(target:Ship) {
-        type = "missile"
-        target.damageTaken(15, 0.5, 1.5)
-        MissleCount -= 1
+        if (target.Shield > 0){
+            target.Shield -= self.dmg - (self.dmg/4)
+        }
+        else {
+            target.Hp -= (self.dmg + self.dmg/2)
+        }
     }
     func fireLaser(target:Ship) {
-        type = "laser"
-        target.damageTanken(15, 1.5, 0.5)
-        energyCell -= 1
+        if (target.Shield > 0){
+            target.Shield -= self.dmg + (self.dmg/3)
+        }
+        else {
+            target.Hp -= (self.dmg - self.dmg/2)
+        }
     }
 }
