@@ -85,6 +85,24 @@ class Ship{
         self.maxMissle = self.MissleCount
         self.maxEnergy = self.EnergyCell
     }
+    func isValid(aryNum: Int) -> Bool{
+        if (self.Abilities[aryNum].atkType == "laser"){
+            if (self.Abilities[aryNum].cost > self.EnergyCell){
+                return false
+            }
+            else{
+                return true
+            }
+        }
+        else{
+            if (self.Abilities[aryNum].cost > self.MissleCount){
+                return false
+            }
+            else{
+                return true
+            }
+        }
+    }
     func attack(aryNum: Int,target: Ship) {
         if (self.Abilities[aryNum].atkType == "laser"){
             if (self.Abilities[aryNum].cost > self.EnergyCell){

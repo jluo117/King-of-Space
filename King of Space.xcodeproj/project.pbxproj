@@ -19,6 +19,8 @@
 		793916171FB766D80051098E /* King_of_SpaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793916161FB766D80051098E /* King_of_SpaceUITests.swift */; };
 		793916291FB777690051098E /* ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793916281FB777690051098E /* ship.swift */; };
 		7994D89E1FB79D1D007DB6A3 /* abilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994D89D1FB79D1D007DB6A3 /* abilities.swift */; };
+		7994D8A01FB7AA5F007DB6A3 /* fight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994D89F1FB7AA5F007DB6A3 /* fight.swift */; };
+		7994D8A21FB7B5BA007DB6A3 /* 2009357ec934974ef16f8cf92ad917fc.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7994D8A11FB7B5BA007DB6A3 /* 2009357ec934974ef16f8cf92ad917fc.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		793916181FB766D80051098E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		793916281FB777690051098E /* ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ship.swift; path = "King of Space/src/ship.swift"; sourceTree = "<group>"; };
 		7994D89D1FB79D1D007DB6A3 /* abilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = abilities.swift; path = "King of Space/src/abilities.swift"; sourceTree = "<group>"; };
+		7994D89F1FB7AA5F007DB6A3 /* fight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = fight.swift; path = "King of Space/src/fight.swift"; sourceTree = "<group>"; };
+		7994D8A11FB7B5BA007DB6A3 /* 2009357ec934974ef16f8cf92ad917fc.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2009357ec934974ef16f8cf92ad917fc.jpeg; path = Assets.xcassets/2009357ec934974ef16f8cf92ad917fc.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				793916281FB777690051098E /* ship.swift */,
+				7994D89F1FB7AA5F007DB6A3 /* fight.swift */,
 				7994D89D1FB79D1D007DB6A3 /* abilities.swift */,
 				793915EF1FB766D70051098E /* King of Space */,
 				7939160A1FB766D80051098E /* King of SpaceTests */,
@@ -113,6 +118,7 @@
 				793915F21FB766D80051098E /* GameScene.sks */,
 				793915F41FB766D80051098E /* Actions.sks */,
 				793915F61FB766D80051098E /* GameScene.swift */,
+				7994D8A11FB7B5BA007DB6A3 /* 2009357ec934974ef16f8cf92ad917fc.jpeg */,
 				793915F81FB766D80051098E /* GameViewController.swift */,
 				793915FA1FB766D80051098E /* Main.storyboard */,
 				793915FD1FB766D80051098E /* Assets.xcassets */,
@@ -249,6 +255,7 @@
 			files = (
 				793915FC1FB766D80051098E /* Main.storyboard in Resources */,
 				793915F31FB766D80051098E /* GameScene.sks in Resources */,
+				7994D8A21FB7B5BA007DB6A3 /* 2009357ec934974ef16f8cf92ad917fc.jpeg in Resources */,
 				793915FE1FB766D80051098E /* Assets.xcassets in Resources */,
 				793916011FB766D80051098E /* LaunchScreen.storyboard in Resources */,
 				793915F51FB766D80051098E /* Actions.sks in Resources */,
@@ -276,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7994D8A01FB7AA5F007DB6A3 /* fight.swift in Sources */,
 				793915F71FB766D80051098E /* GameScene.swift in Sources */,
 				793916291FB777690051098E /* ship.swift in Sources */,
 				7994D89E1FB79D1D007DB6A3 /* abilities.swift in Sources */,
