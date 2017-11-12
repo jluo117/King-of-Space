@@ -2,6 +2,27 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:King of Space.xcodeproj">
+      location = "group:../storyBoard/Shop.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/jamesluo/Documents/Github/King of Space/menu.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/jamesluo/Documents/Github/King of Space/Game.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../King of Space/src/claimReward.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../King of Space/src/shop.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../King of Space/src/player.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../King of Space/src/Quest.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

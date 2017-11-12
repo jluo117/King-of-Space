@@ -21,6 +21,10 @@
 		7994D8A81FB7BB15007DB6A3 /* bigsip.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7994D8A71FB7BB15007DB6A3 /* bigsip.jpg */; };
 		7994D8AA1FB7CAB8007DB6A3 /* starDestoryer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7994D8A91FB7CAB8007DB6A3 /* starDestoryer.jpg */; };
 		7994D8AC1FB7D3A2007DB6A3 /* PostFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994D8AB1FB7D3A2007DB6A3 /* PostFight.swift */; };
+		7994D8B61FB7DF8C007DB6A3 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994D8B21FB7DF8C007DB6A3 /* player.swift */; };
+		7994D8B81FB7E01A007DB6A3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994D8B71FB7E01A007DB6A3 /* Game.swift */; };
+		7994D8BA1FB7EE3E007DB6A3 /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994D8B91FB7EE3D007DB6A3 /* menu.swift */; };
+		7994D8BC1FB7FB88007DB6A3 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994D8BB1FB7FB88007DB6A3 /* Shop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		7994D8A71FB7BB15007DB6A3 /* bigsip.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bigsip.jpg; path = Assets.xcassets/bigsip.jpg; sourceTree = "<group>"; };
 		7994D8A91FB7CAB8007DB6A3 /* starDestoryer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = starDestoryer.jpg; path = "King of Space/Assets.xcassets/starDestoryer.jpg"; sourceTree = "<group>"; };
 		7994D8AB1FB7D3A2007DB6A3 /* PostFight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostFight.swift; path = storyBoard/PostFight.swift; sourceTree = "<group>"; };
+		7994D8B21FB7DF8C007DB6A3 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = player.swift; path = "King of Space.xcodeproj/../King of Space/src/player.swift"; sourceTree = "<group>"; };
+		7994D8B71FB7E01A007DB6A3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Game.swift; path = "/Users/jamesluo/Documents/Github/King of Space/Game.swift"; sourceTree = "<absolute>"; };
+		7994D8B91FB7EE3D007DB6A3 /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = menu.swift; path = "/Users/jamesluo/Documents/Github/King of Space/menu.swift"; sourceTree = "<absolute>"; };
+		7994D8BB1FB7FB88007DB6A3 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Shop.swift; path = "King of Space.xcodeproj/../storyBoard/Shop.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +101,11 @@
 			children = (
 				7994D8A51FB7B9D7007DB6A3 /* fightController.swift */,
 				7994D8A31FB7B71B007DB6A3 /* Main.storyboard */,
+				7994D8B91FB7EE3D007DB6A3 /* menu.swift */,
 				7994D8AB1FB7D3A2007DB6A3 /* PostFight.swift */,
+				7994D8B71FB7E01A007DB6A3 /* Game.swift */,
+				7994D8BB1FB7FB88007DB6A3 /* Shop.swift */,
+				7994D8B21FB7DF8C007DB6A3 /* player.swift */,
 				7994D8A91FB7CAB8007DB6A3 /* starDestoryer.jpg */,
 				793916281FB777690051098E /* ship.swift */,
 				7994D89F1FB7AA5F007DB6A3 /* fight.swift */,
@@ -286,9 +298,13 @@
 				7994D8A61FB7B9D7007DB6A3 /* fightController.swift in Sources */,
 				7994D8A01FB7AA5F007DB6A3 /* fight.swift in Sources */,
 				7994D8AC1FB7D3A2007DB6A3 /* PostFight.swift in Sources */,
+				7994D8BC1FB7FB88007DB6A3 /* Shop.swift in Sources */,
 				793916291FB777690051098E /* ship.swift in Sources */,
 				7994D89E1FB79D1D007DB6A3 /* abilities.swift in Sources */,
+				7994D8B81FB7E01A007DB6A3 /* Game.swift in Sources */,
+				7994D8B61FB7DF8C007DB6A3 /* player.swift in Sources */,
 				793915F11FB766D80051098E /* AppDelegate.swift in Sources */,
+				7994D8BA1FB7EE3E007DB6A3 /* menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

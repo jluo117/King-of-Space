@@ -7,11 +7,12 @@
 //
 
 import UIKit
-var Player = Ship(ShipClass:"Star Destoryers" , ShipName: "Darth Vader")
-var Computer = Ship(ShipClass: "Base", ShipName: "Han Solo")
-var Battle = fight(ship1: Player, ship2: Computer)
-class fightController: UIViewController {
-
+    var Computer = Ship(ShipClass: "Elite Fighters", ShipName: "Han Solo")
+    var Battle = fight(ship1: Thegame.player.Ships, ship2: Computer)
+    var Ship1 = Ship(ShipClass: "Base", ShipName: "HeMan")
+    var Ship2 = Ship(ShipClass: "Star Destoryers", ShipName: "Dr. Manhattan")
+    var ShipList = [Computer,Ship1,Ship2]
+    class fightController: UIViewController {
     @IBOutlet weak var PlayerName: UILabel!
     @IBOutlet weak var CpuName: UILabel!
     @IBOutlet weak var LaserCost: UILabel!
@@ -29,28 +30,34 @@ class fightController: UIViewController {
     @IBOutlet weak var PlayerShip: UIImageView!
     @IBOutlet weak var CpuShip: UIImageView!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        if (Player.ShipClass == "Star Destoryers"){
+        Battle.PlayerShip = Thegame.player.Ships
+        let attackArray  = Int(arc4random_uniform(UInt32((ShipList.count))))
+        let enemy = ShipList[attackArray]
+        enemy.recover()
+        Battle.CpuShip = enemy
+        if (Battle.PlayerShip.ShipClass == "Star Destoryers"){
             PlayerShip.image = #imageLiteral(resourceName: "starDestoryer.jpg")
         }
-        else if (Player.ShipClass == "Elite Fighters"){
+        else if (Battle.PlayerShip.ShipClass == "Elite Fighters"){
             PlayerShip.image = #imageLiteral(resourceName: "bigsip.jpg")
         }
         else{
             PlayerShip.image = #imageLiteral(resourceName: "standard.jpeg")
         }
         
-        if (Computer.ShipClass == "Star Destoryers"){
+        if (Battle.CpuShip.ShipClass == "Star Destoryers"){
             CpuShip.image = #imageLiteral(resourceName: "starDestoryer.jpg")
         }
-        else if (Computer.ShipClass == "Elite Fighters"){
+        else if (Battle.CpuShip.ShipClass == "Elite Fighters"){
             CpuShip.image = #imageLiteral(resourceName: "bigsip.jpg")
         }
         else{
             CpuShip.image = #imageLiteral(resourceName: "standard.jpeg")
         }
-        PlayerName.text = Player.ShipName
-        CpuName.text = Computer.ShipName
+        PlayerName.text = Battle.PlayerShip.ShipName
+        CpuName.text = Battle.CpuShip.ShipName
         UserHp.text = String(Battle.PlayerShip.Hp)
         UserShield.text = String(Battle.PlayerShip.Shield)
         MissleCount.text = String(Battle.PlayerShip.MissleCount)
@@ -58,8 +65,8 @@ class fightController: UIViewController {
         CpuHp.text = String(Battle.CpuShip.Hp)
         CpuShield.text = String(Battle.CpuShip.Shield)
         // Do any additional setup after loading the view.
-        MissleCost.text = String(Player.Abilities[0].cost)
-        LaserCost.text = String(Player.Abilities[1].cost)
+        MissleCost.text = String(Battle.PlayerShip.Abilities[0].cost)
+        LaserCost.text = String(Battle.PlayerShip.Abilities[1].cost)
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,8 +83,8 @@ class fightController: UIViewController {
             if (Battle.attack(Turn: "Cpu", Called: 0)){
                 performSegue(withIdentifier: "PostFight", sender: self)
             }
-            PlayerName.text = Player.ShipName
-            CpuName.text = Computer.ShipName
+            PlayerName.text = Battle.PlayerShip.ShipName
+            CpuName.text = Battle.CpuShip.ShipName
             UserHp.text = String(Battle.PlayerShip.Hp)
             UserShield.text = String(Battle.PlayerShip.Shield)
             MissleCount.text = String(Battle.PlayerShip.MissleCount)
@@ -98,8 +105,8 @@ class fightController: UIViewController {
             if (Battle.attack(Turn: "Cpu", Called: 0)){
                 performSegue(withIdentifier: "PostFight", sender: self)
             }
-            PlayerName.text = Player.ShipName
-            CpuName.text = Computer.ShipName
+            PlayerName.text = Battle.PlayerShip.ShipName
+            CpuName.text = Battle.CpuShip.ShipName
             UserHp.text = String(Battle.PlayerShip.Hp)
             UserShield.text = String(Battle.PlayerShip.Shield)
             MissleCount.text = String(Battle.PlayerShip.MissleCount)
@@ -123,7 +130,7 @@ class fightController: UIViewController {
             if (Battle.attack(Turn: "Cpu", Called: 0)){
                 performSegue(withIdentifier: "PostFight", sender: self)
             }
-            PlayerName.text = Player.ShipName
+            PlayerName.text = Battle.PlayerShip.ShipName
             CpuName.text = Computer.ShipName
             UserHp.text = String(Battle.PlayerShip.Hp)
             UserShield.text = String(Battle.PlayerShip.Shield)

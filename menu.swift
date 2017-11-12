@@ -1,28 +1,33 @@
 //
-//  PostFight.swift
-//  King of Space
+//  menu.swift
+//  
 //
 //  Created by james luo on 11/11/17.
-//  Copyright © 2017 james luo. All rights reserved.
 //
 
 import UIKit
+var Thegame = game(userName: "bob")
+class menu: UIViewController {
+    var user = "James"
+   
 
-class PostFight: UIViewController {
-
-    @IBOutlet weak var Money: UILabel!
-    @IBOutlet weak var Stat: UILabel!
+    @IBAction func Start(_ sender: Any) {
+        var runGame = game(userName: user)
+        Thegame = runGame
+        performSegue(withIdentifier: "StartGame", sender: self)
+    }
+    @IBOutlet weak var Welcome: UILabel!
+    
+    @IBOutlet weak var userInput: UITextField!
+    
+   
+    @IBAction func UserName(NameText: UITextField) {
+            user = NameText.text!
+            Welcome.text = "Welcome " + user
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        Thegame.player.Ships.Shield = Thegame.player.Ships.maxShield
-        if Battle.PlayerShip.Hp > 0 && Battle.CpuShip.Hp <= 0{
-            Stat.text = "You Win the Battle"
-            Thegame.player.money += 150
-            Money.text = String(Thegame.player.money)
-        }
-        else{
-            Stat.text = "Your Ship is gone"
-        }
+
         // Do any additional setup after loading the view.
     }
 
