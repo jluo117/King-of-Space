@@ -122,5 +122,6 @@ class Ship{
         self.EnergyCell = self.maxEnergy
         self.MissleCount = self.maxMissle
         self.Hp = self.maxHp
+        self.Shield = self.maxShield
     }
 }
