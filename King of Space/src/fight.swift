@@ -23,7 +23,7 @@ class fight{
         else{
             while (true){
                 var attackArray  = Int(arc4random_uniform(UInt32((CpuShip.Abilities.count))))
-                attackArray -= 1
+                
                 if CpuShip.isValid(aryNum: attackArray){
                     CpuShip.attack(aryNum: attackArray, target: PlayerShip)
                     break

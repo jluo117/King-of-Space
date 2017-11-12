@@ -41,9 +41,11 @@ class Ship{
             self.Hp = 600
             self.Shield = 700
             self.MissleCount = 100
-            self.EnergyCell = 0
+            self.EnergyCell = 800
             let Missle = Ability(dmg: 100, cost: 10, atkType: "missile")
+            let LaserShot = Ability(dmg:300, cost:100, atkType: "laser")
             self.Abilities.append(Missle)
+            self.Abilities.append(LaserShot)
         }
         else if ShipClass == "Elite Fighters"{
             self.ShipClass = ShipClass
@@ -105,18 +107,15 @@ class Ship{
     }
     func attack(aryNum: Int,target: Ship) {
         if (self.Abilities[aryNum].atkType == "laser"){
-            if (self.Abilities[aryNum].cost > self.EnergyCell){
-                return
-            }
             self.EnergyCell -= self.Abilities[aryNum].cost
             self.Abilities[aryNum].attack(target: target)
         }
-        else if (self.Abilities[aryNum].atkType == "missle"){
-            if (self.Abilities[aryNum].cost > self.MissleCount){
-                return
-            }
+        else if (self.Abilities[aryNum].atkType == "missile"){
             self.MissleCount -= self.Abilities[aryNum].cost
             self.Abilities[aryNum].attack(target: target)
+        }
+        else{
+            self.Abilities[2].attack(target: target)
         }
     }
     func recover(){
