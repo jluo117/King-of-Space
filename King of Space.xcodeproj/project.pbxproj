@@ -25,6 +25,7 @@
 		7994D8B81FB7E01A007DB6A3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994D8B71FB7E01A007DB6A3 /* Game.swift */; };
 		7994D8BA1FB7EE3E007DB6A3 /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994D8B91FB7EE3D007DB6A3 /* menu.swift */; };
 		7994D8BC1FB7FB88007DB6A3 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994D8BB1FB7FB88007DB6A3 /* Shop.swift */; };
+		7994D8BE1FB806E3007DB6A3 /* King of Space Title.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7994D8BD1FB806E3007DB6A3 /* King of Space Title.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		7994D8B71FB7E01A007DB6A3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Game.swift; path = "/Users/jamesluo/Documents/Github/King of Space/Game.swift"; sourceTree = "<absolute>"; };
 		7994D8B91FB7EE3D007DB6A3 /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = menu.swift; path = "/Users/jamesluo/Documents/Github/King of Space/menu.swift"; sourceTree = "<absolute>"; };
 		7994D8BB1FB7FB88007DB6A3 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Shop.swift; path = "King of Space.xcodeproj/../storyBoard/Shop.swift"; sourceTree = "<group>"; };
+		7994D8BD1FB806E3007DB6A3 /* King of Space Title.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "King of Space Title.jpg"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				7994D8A71FB7BB15007DB6A3 /* bigsip.jpg */,
 				793915FD1FB766D80051098E /* Assets.xcassets */,
 				793915FF1FB766D80051098E /* LaunchScreen.storyboard */,
+				7994D8BD1FB806E3007DB6A3 /* King of Space Title.jpg */,
 				793916021FB766D80051098E /* Info.plist */,
 			);
 			path = "King of Space";
@@ -267,6 +270,7 @@
 			files = (
 				7994D8A21FB7B5BA007DB6A3 /* standard.jpeg in Resources */,
 				793915FE1FB766D80051098E /* Assets.xcassets in Resources */,
+				7994D8BE1FB806E3007DB6A3 /* King of Space Title.jpg in Resources */,
 				793916011FB766D80051098E /* LaunchScreen.storyboard in Resources */,
 				7994D8AA1FB7CAB8007DB6A3 /* starDestoryer.jpg in Resources */,
 				7994D8A81FB7BB15007DB6A3 /* bigsip.jpg in Resources */,
