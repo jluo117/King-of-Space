@@ -27,7 +27,7 @@ class menu: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "King of Space Title.jpg")!)
         // Do any additional setup after loading the view.
     }
 
