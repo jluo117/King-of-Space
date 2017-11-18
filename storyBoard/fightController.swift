@@ -86,11 +86,21 @@ import UIKit
             PlayerName.text = Battle.PlayerShip.ShipName
             CpuName.text = Battle.CpuShip.ShipName
             UserHp.text = String(Battle.PlayerShip.Hp)
-            UserShield.text = String(Battle.PlayerShip.Shield)
+            if (Battle.PlayerShip.Shield < 0){
+                UserShield.text = "0"
+            }
+            else{
+                UserShield.text = String(Battle.PlayerShip.Shield)
+            }
             MissleCount.text = String(Battle.PlayerShip.MissleCount)
             LaserCount.text = String(Battle.PlayerShip.EnergyCell)
             CpuHp.text = String(Battle.CpuShip.Hp)
-            CpuShield.text = String(Battle.CpuShip.Shield)
+            if (Battle.CpuShip.Shield < 0){
+                CpuShield.text = "0"
+            }
+            else{
+                CpuShield.text = String(Battle.CpuShip.Shield)
+            }
             return
         }
         ErrorMsg.text = "Not enough resources"
@@ -108,11 +118,21 @@ import UIKit
             PlayerName.text = Battle.PlayerShip.ShipName
             CpuName.text = Battle.CpuShip.ShipName
             UserHp.text = String(Battle.PlayerShip.Hp)
-            UserShield.text = String(Battle.PlayerShip.Shield)
+            if (Battle.PlayerShip.Shield < 0){
+                UserShield.text = "0"
+            }
+            else{
+                UserShield.text = String(Battle.PlayerShip.Shield)
+            }
             MissleCount.text = String(Battle.PlayerShip.MissleCount)
             LaserCount.text = String(Battle.PlayerShip.EnergyCell)
             CpuHp.text = String(Battle.CpuShip.Hp)
-            CpuShield.text = String(Battle.CpuShip.Shield)
+            if (Battle.CpuShip.Shield < 0){
+                CpuShield.text = "0"
+            }
+            else{
+                CpuShield.text = String(Battle.CpuShip.Shield)
+            }
             return
         }
         
@@ -131,13 +151,23 @@ import UIKit
                 performSegue(withIdentifier: "PostFight", sender: self)
             }
             PlayerName.text = Battle.PlayerShip.ShipName
-            CpuName.text = Computer.ShipName
+            //CpuName.text = Computer.ShipName
             UserHp.text = String(Battle.PlayerShip.Hp)
-            UserShield.text = String(Battle.PlayerShip.Shield)
+            if (Battle.PlayerShip.Shield < 0){
+                UserShield.text = "0"
+            }
+            else{
+                UserShield.text = String(Battle.PlayerShip.Shield)
+            }
             MissleCount.text = String(Battle.PlayerShip.MissleCount)
             LaserCount.text = String(Battle.PlayerShip.EnergyCell)
             CpuHp.text = String(Battle.CpuShip.Hp)
+            if (Battle.CpuShip.Shield < 0){
+                CpuShield.text = "0"
+            }
+            else{
             CpuShield.text = String(Battle.CpuShip.Shield)
+            }
         }
     }
     /*

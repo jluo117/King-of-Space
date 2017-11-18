@@ -8,7 +8,7 @@
 import UIKit
 var Thegame = game(userName: "bob")
 class menu: UIViewController {
-    var user = "James"
+    var user = "Darth Vader"
    
 
     @IBAction func Start(_ sender: Any) {

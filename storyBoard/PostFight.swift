@@ -18,11 +18,11 @@ class PostFight: UIViewController {
         if Battle.PlayerShip.Hp > 0 && Battle.CpuShip.Hp <= 0{
             Stat.text = "You Win the Battle"
             Thegame.player.money += 150
-            Money.text = String(Thegame.player.money)
         }
         else{
             Stat.text = "Your Ship is gone"
         }
+         Money.text = "You have " + String(Thegame.player.money)
         // Do any additional setup after loading the view.
     }
 
